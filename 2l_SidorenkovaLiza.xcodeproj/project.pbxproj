@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD120E1E26F36FF4000BE9E1 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD120E1D26F36FF4000BE9E1 /* FriendsViewController.swift */; };
+		AD120E2026F37034000BE9E1 /* FriendsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD120E1F26F37034000BE9E1 /* FriendsList.storyboard */; };
+		AD120E2426F37180000BE9E1 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD120E2226F37180000BE9E1 /* BasicTableViewCell.swift */; };
+		AD120E2526F37180000BE9E1 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD120E2326F37180000BE9E1 /* BasicTableViewCell.xib */; };
 		AD7C8F8626EF55380067D012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C8F8526EF55380067D012 /* AppDelegate.swift */; };
 		AD7C8F8826EF55380067D012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C8F8726EF55380067D012 /* SceneDelegate.swift */; };
 		AD7C8F8A26EF55380067D012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C8F8926EF55380067D012 /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD120E1D26F36FF4000BE9E1 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		AD120E1F26F37034000BE9E1 /* FriendsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendsList.storyboard; sourceTree = "<group>"; };
+		AD120E2226F37180000BE9E1 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		AD120E2326F37180000BE9E1 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
 		AD7C8F8226EF55380067D012 /* 2l_SidorenkovaLiza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2l_SidorenkovaLiza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7C8F8526EF55380067D012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7C8F8726EF55380067D012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD120E2126F3712F000BE9E1 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				AD120E2226F37180000BE9E1 /* BasicTableViewCell.swift */,
+				AD120E2326F37180000BE9E1 /* BasicTableViewCell.xib */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		AD7C8F7926EF55380067D012 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +84,12 @@
 				AD7C8F8926EF55380067D012 /* ViewController.swift */,
 				AD7C8F8B26EF55380067D012 /* Main.storyboard */,
 				AD7C8F8E26EF553B0067D012 /* Assets.xcassets */,
+				AD120E2126F3712F000BE9E1 /* Basic */,
 				AD7C8F9026EF553B0067D012 /* LaunchScreen.storyboard */,
 				AD7C8F9326EF553B0067D012 /* Info.plist */,
 				AD7C8FA726EF72320067D012 /* R.swift */,
+				AD120E1D26F36FF4000BE9E1 /* FriendsViewController.swift */,
+				AD120E1F26F37034000BE9E1 /* FriendsList.storyboard */,
 				AD7C8FAD26EF75BD0067D012 /* DebugViewController.swift */,
 				AD7C8FAF26EF76E20067D012 /* DebugMenu.storyboard */,
 			);
@@ -133,9 +153,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD120E2526F37180000BE9E1 /* BasicTableViewCell.xib in Resources */,
 				AD7C8F9226EF553B0067D012 /* LaunchScreen.storyboard in Resources */,
 				AD7C8F8F26EF553B0067D012 /* Assets.xcassets in Resources */,
 				AD7C8F8D26EF55380067D012 /* Main.storyboard in Resources */,
+				AD120E2026F37034000BE9E1 /* FriendsList.storyboard in Resources */,
 				AD7C8FB026EF76E20067D012 /* DebugMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +173,9 @@
 				AD7C8F8626EF55380067D012 /* AppDelegate.swift in Sources */,
 				AD7C8FA826EF72320067D012 /* R.swift in Sources */,
 				AD7C8F8826EF55380067D012 /* SceneDelegate.swift in Sources */,
+				AD120E1E26F36FF4000BE9E1 /* FriendsViewController.swift in Sources */,
 				AD7C8FAE26EF75BD0067D012 /* DebugViewController.swift in Sources */,
+				AD120E2426F37180000BE9E1 /* BasicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
