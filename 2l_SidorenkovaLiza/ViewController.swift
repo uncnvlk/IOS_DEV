@@ -87,11 +87,9 @@ class ViewController: UIViewController {
 
 
     private func checkPassword() {
-        let login = loginTextField.text!
-        let password = passwordTextField.text!
-    
-        
-        if dict[login] != nil && password == dict[login] {
+        if let login = loginTextField.text,
+           let password = passwordTextField.text,
+           dict[login] != nil, password == dict[login] {
             self.showAdminScene()
         } else {
             self.showAllert()
