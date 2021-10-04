@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleView: UILabel!
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
+    
+    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var loginTextField: UITextField!
@@ -20,6 +26,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGesture()
+        autorizationTitleAnimate()
+        autorizationLabelAnimate(labelField: loginLabel, move: -200)
+        autorizationLabelAnimate(labelField: passwordLabel, move: 200)
+        autorizationTextFieldAnimate(textField: loginTextField)
+        autorizationTextFieldAnimate(textField: passwordTextField)
+        autorizationButtonAnimate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,6 +127,53 @@ class ViewController: UIViewController {
         
         allertController.addAction(action)
         self.present(allertController, animated: true)
+    }
+    
+    private func autorizationTitleAnimate() {
+        self.titleView.transform = CGAffineTransform(translationX: 0, y: -self.view.bounds.height/2)
+            
+        UIView.animate(withDuration: 1,
+                        delay: 0.5,
+                           usingSpringWithDamping: 0.5,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseOut,
+                           animations: {
+                               self.titleView.transform = .identity
+                           },
+                           completion: nil)
+    }
+    
+    private func autorizationLabelAnimate(labelField : UILabel, move: Float) {
+        labelField.transform = CGAffineTransform(translationX: CGFloat(move), y: 0)
+            
+        UIView.animate(withDuration: 1,
+                       delay: 0.5,
+                           usingSpringWithDamping: 0.5,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseOut,
+                           animations: {
+                               labelField.transform = .identity
+                           },
+                           completion: nil)
+    }
+    
+    private func autorizationTextFieldAnimate(textField: UITextField) {
+        textField.alpha = 0.0
+        UIView.animate(withDuration: 1, delay: 0.3, options: .curveEaseInOut, animations: {
+        textField.alpha = 1.0
+        }) { _ in print("Animation Done") }
+    }
+    
+    private func autorizationButtonAnimate() {
+        UIView.animate(withDuration: 0.5,
+            animations: {
+                self.signInButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.5) {
+                    self.signInButton.transform = CGAffineTransform.identity
+                }
+            })
     }
 
 }

@@ -90,9 +90,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SignInButton" destination="zUf-3w-jec" id="WEn-VD-BnD"/>
+                        <outlet property="loginLabel" destination="dQI-OT-JuQ" id="Hto-JX-Ks5"/>
                         <outlet property="loginTextField" destination="jMv-uX-UOF" id="bcQ-U1-41X"/>
+                        <outlet property="passwordLabel" destination="Hcl-gp-XZr" id="asZ-lq-w4G"/>
                         <outlet property="passwordTextField" destination="njd-Rz-GOf" id="ljd-AB-ask"/>
                         <outlet property="scrollView" destination="Bzr-zj-tUW" id="V5b-B6-JZs"/>
+                        <outlet property="signInButton" destination="h79-Ah-4qY" id="cg3-bm-hNg"/>
+                        <outlet property="titleView" destination="4AT-Vi-XiI" id="quH-t7-BVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
